@@ -1,3 +1,3 @@
 # code_practice
 
-1. Array.sort(num)
+1. Arrays.sort(num)
