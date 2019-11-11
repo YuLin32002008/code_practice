@@ -4,6 +4,15 @@
 
 
 # Pass 16/16
+Example :  
+Input:  
+serversNum = 4  
+connectionsNum = 4  
+connections = [[1, 2], [1, 3], [3, 2], [3, 4]]  
+  
+Output:   
+[[3,4]]  
+
 ```java
 class Solution
 {    
