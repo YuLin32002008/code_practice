@@ -59,15 +59,17 @@ class Solution {
            res.put(user, new ArrayList());
    		List<String> songs = userMap.get(user);
    		for(String song : songs) {
-   			String genre = songstogenre.get(song);
+   			String genre = genreToSong.getOrDefault(song, "NoGenre");
    			int c = count.getOrDefault(genre, 0) + 1;
    			count.put(genre, c);
                max = Math.max(c, max);
    		}
            for (String key : count.keySet()) {
-               if (count.get(key) == max) {
-                   res.get(user).add(key);
-               }
+               if(genre != "NoGenre"){
+		   if(count.get(genre) == max){
+			  res.get(user).add(genre);
+			}
+		}
            }
    	}
    	return res;
