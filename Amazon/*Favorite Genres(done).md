@@ -34,11 +34,14 @@ import java.util.Map;
 
 
 // Approach is simple: initialize a mapping of songsToGenre.
-// Then, using our mapping, we iterate through each song (we don't know if songs have multiple genres, so we handle that here), and count up the genres while keeping a 'maximum count'.
+// Then, using our mapping, we iterate through each song 
+// (we don't know if songs have multiple genres, so we handle that here), 
+// and count up the genres while keeping a 'maximum count'.
 // After that, we find out all of the songs that are equal to our maximum mapping. 
 
 class Solution {
-	   public Map<String, List<String>> favoriteGenre(Map<String, List<String>> userMap, Map<String, List<String>> genreMap) {
+	public Map<String, List<String>> favoriteGenre(Map<String, List<String>> userMap, Map<String, 
+	List<String>> genreMap) {
    	Map<String, List<String>> res = new HashMap<>();
    	Map<String, String> songstogenre = new HashMap<>();
    	
