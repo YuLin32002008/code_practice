@@ -6,7 +6,8 @@ Input: 1->2->4, 1->3->4
 Output: 1->1->2->3->4->4
 
 ```java
-public ListNode mergeTwoLists(ListNode l1, ListNode l2) {				
+public ListNode mergeTwoLists(ListNode l1, ListNode l2) {	
+// maintain an unchanging reference to node ahead of the return node.
 		ListNode res = new ListNode(0);
 		ListNode curr = res;
         
