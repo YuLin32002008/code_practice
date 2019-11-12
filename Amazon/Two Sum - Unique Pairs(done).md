@@ -19,6 +19,34 @@ Output: 1
 Explanation:  
 [1, 5] and [5, 1] are considered the same.  
 
+
+## My solution
+
+```java
+	public static int getUniquePairs(int[] nums, int target){
+		HashSet<Integer> seen = new HashSet<>();
+		HashMap<Integer, Integer> map = new HashMap<>();
+		int ans = 0;
+		
+		for(int num : nums){
+			int complement = target - num;
+			
+			if(map.containsKey(complement)){
+				if(!seen.contains(complement)){
+					seen.add(complement);
+					seen.add(num);
+					ans++;
+				}
+			}
+			else{
+				map.put(num, num);
+			}
+		}
+		return ans;	
+	}
+	
+  ```
+
 ```java
 // java O(n)
 public static int getUniquePairsOpti(int[] nums, int target){
